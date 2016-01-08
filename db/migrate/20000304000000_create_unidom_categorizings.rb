@@ -1,14 +1,14 @@
-class CreateUnidomCategoryRollups < ActiveRecord::Migration
+class CreateUnidomCategorizings < ActiveRecord::Migration
 
   def change
 
-    create_table :unidom_category_rollups, id: :uuid do |t|
+    create_table :unidom_categorizings, id: :uuid do |t|
 
-      t.references :ancestor_category,   type: :uuid, null: false
-      t.references :descendant_category, type: :uuid, null: false
+      t.references :category,    type: :uuid, null: false
+      t.references :categorized, type: :uuid, null: false,
+        polymorphic: { type: :uuid, null: false }
 
       t.boolean :elemental, null: false, default: false
-      t.integer :distance,  null: false, default: 1
 
       t.column   :state, 'char(1)', null: false, default: 'C'
       t.datetime :opened_at,        null: false, default: ::Time.utc(1970)
@@ -20,8 +20,8 @@ class CreateUnidomCategoryRollups < ActiveRecord::Migration
 
     end
 
-    add_index :unidom_category_rollups, :ancestor_category_id
-    add_index :unidom_category_rollups, :descendant_category_id
+    add_index :unidom_categorizings, :category_id
+    add_index :unidom_categorizings, :categorized_id
 
   end
 
