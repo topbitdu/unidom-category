@@ -8,7 +8,7 @@ class CreateUnidomCategories < ActiveRecord::Migration
 
       t.string :code,         null: true,  default: nil, limit: 64
       t.string :name,         null: false, default: '',  limit: 200
-      t.string :abbreviation, null: false, default: '',  limit: 16
+      t.string :abbreviation, null: true,  default: nil, limit: 16
 
       t.text :description
 
