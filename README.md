@@ -15,5 +15,5 @@ rake db:migrate
 
 ## Call the Model:
 ```ruby
-Unidom::Category::Category.coded_as('x1').valid_at.alive.first
+Unidom::Category::Category.coded_as('x1').scheme_is(scheme).valid_at.alive.first
 ```
