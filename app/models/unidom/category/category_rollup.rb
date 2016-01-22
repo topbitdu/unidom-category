@@ -14,6 +14,8 @@ class Unidom::Category::CategoryRollup < ::ActiveRecord::Base
   scope :ancestor_category_is,   ->(category) { where ancestor_category_id:   (category.respond_to?(:id) ? category.id : category) }
   scope :descendant_category_is, ->(category) { where descendant_category_id: (category.respond_to?(:id) ? category.id : category) }
 
+  include ::Unidom::Common::Concerns::ModelExtension
+
   after_create ->(record) {
     return unless 1==record.distance
     ancestor_category = record.ancestor_category_id
