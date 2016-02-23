@@ -6,11 +6,11 @@ require 'unidom/category/version'
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name        = 'unidom-category'
-  spec.version     = ::Unidom::Category::VERSION
+  spec.version     = Unidom::Category::VERSION
   spec.authors     = [ 'Topbit Du' ]
   spec.email       = [ 'topbit.du@gmail.com' ]
   spec.homepage    = 'https://github.com/topbitdu/unidom-category'
-  spec.summary     = 'The Category domain model engine includes Category and its relative models.'
+  spec.summary     = 'Unidom Category Domain Model Engine 类别领域模型引擎'
   spec.description = 'Unidom (UNIfied Domain Object Model) is a series of domain model engines. The Category domain model engine includes Category and its relative models. Unidom (统一领域对象模型)是一系列的领域模型引擎。类别领域模型引擎包括类别及其相关的模型。'
   spec.license     = 'MIT'
 
