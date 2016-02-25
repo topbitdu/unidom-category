@@ -12,6 +12,6 @@ class Unidom::Category::CategoryScheme < ::ActiveRecord::Base
 
   scope :owned_by, ->(owner) { where owner: owner }
 
-  include ::Unidom::Common::Concerns::ModelExtension
+  include Unidom::Common::Concerns::ModelExtension
 
 end
