@@ -21,6 +21,6 @@ class Unidom::Category::Category < ActiveRecord::Base
   scope :code_length_is,     ->(length) { where 'LENGTH(code) = :code_length',  code_length:       length     }
   scope :code_starting_with, ->(prefix) { where 'code LIKE :prefix_expression', prefix_expression: prefix+'%' }
 
-  include ::Unidom::Common::Concerns::ModelExtension
+  include Unidom::Common::Concerns::ModelExtension
 
 end
