@@ -19,6 +19,7 @@ gem 'unidom-category'
 ```shell
 rake db:migrate
 ```
+The migration versions start with 200003.
 
 ## Call the Model
 ```ruby
