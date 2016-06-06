@@ -4,6 +4,8 @@ class Unidom::Category::CategoryRollup < ::ActiveRecord::Base
 
   self.table_name = 'unidom_category_rollups'
 
+  include Unidom::Common::Concerns::ModelExtension
+
   validates :distance, presence: true, numericality: { integer_only: true, greater_than: 0 }
 
   belongs_to :ancestor_category,   class_name: 'Unidom::Category::Category'
@@ -13,8 +15,6 @@ class Unidom::Category::CategoryRollup < ::ActiveRecord::Base
 
   scope :ancestor_category_is,   ->(category) { where ancestor_category_id:   (category.respond_to?(:id) ? category.id : category) }
   scope :descendant_category_is, ->(category) { where descendant_category_id: (category.respond_to?(:id) ? category.id : category) }
-
-  include Unidom::Common::Concerns::ModelExtension
 
   after_create ->(record) {
     return unless 1==record.distance
