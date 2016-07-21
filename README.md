@@ -24,4 +24,5 @@ The migration versions start with 200003.
 ## Call the Model
 ```ruby
 Unidom::Category::Category.coded_as('x1').scheme_is(scheme).valid_at.alive.first
+Unidom::Category::Categorizing.categorize!(category, product)
 ```

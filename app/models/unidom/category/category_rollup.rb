@@ -1,6 +1,6 @@
 # Category Rollup 是分类的层级关系。
 
-class Unidom::Category::CategoryRollup < ::ActiveRecord::Base
+class Unidom::Category::CategoryRollup < ActiveRecord::Base
 
   self.table_name = 'unidom_category_rollups'
 
@@ -27,5 +27,9 @@ class Unidom::Category::CategoryRollup < ::ActiveRecord::Base
         first_or_create! elemental: ancestor_category_rollup.elemental, from_date: ancestor_category_rollup.from_date
     end
   }
+
+  def self.roll_up!(ancestor_category, descendant_category, opened_at = Time.now)
+    self.descendant_category_is(descendant_category).ancestor_category_is(ancestor_category).valid_at.alive.first_or_create! opened_at: opened_at
+  end
 
 end

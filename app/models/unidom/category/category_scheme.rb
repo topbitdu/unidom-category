@@ -1,7 +1,7 @@
 # Category Scheme 是分类体系。
 # 所有者（owner）可以是系统（System）、标准（Standard）、或者某个参与者（Party，如：Person、Shop、Company）。
 
-class Unidom::Category::CategoryScheme < ::ActiveRecord::Base
+class Unidom::Category::CategoryScheme < ActiveRecord::Base
 
   self.table_name = 'unidom_category_schemes'
 

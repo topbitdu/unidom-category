@@ -6,8 +6,8 @@ class Unidom::Category::Category < ActiveRecord::Base
 
   include Unidom::Common::Concerns::ModelExtension
 
-  validates :name,         presence:    true, length: { in: 2..self.columns_hash['name'].length         }
-  validates :abbreviation, allow_blank: true, length: { in: 2..self.columns_hash['abbreviation'].length }
+  validates :name,         presence:    true, length: { in: 2..self.columns_hash['name'].limit         }
+  validates :abbreviation, allow_blank: true, length: { in: 2..self.columns_hash['abbreviation'].limit }
 
   belongs_to :scheme, class_name: 'Unidom::Category::CategoryScheme', foreign_key: :scheme_id
 
