@@ -25,4 +25,6 @@ The migration versions start with 200003.
 ```ruby
 Unidom::Category::Category.coded_as('x1').scheme_is(scheme).valid_at.alive.first
 Unidom::Category::Categorizing.categorize!(category, product)
+
+Unidom::Category::CategoryRollup.roll_up! parent_category, child_category
 ```
