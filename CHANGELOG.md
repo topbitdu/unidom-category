@@ -9,7 +9,11 @@
 ## v0.2
 1. Improved the Categorizing model to add the ::categorize! method
 2. Improved the Category model for the validation
-3. Improved the Ruby Gem Specification to depend on unidom-common v0.9
+3. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
 
 ## v0.3
-1. Improved the Category Rollup model to add the #roll_up! method
+1. Improved the Category Rollup model to add the ::roll_up! method
+
+## v1.0
+1. Improved the Categorizing model & the Category Rollup model to support the Keyword Arguments
+2. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0
