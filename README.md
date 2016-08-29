@@ -23,8 +23,21 @@ The migration versions start with 200003.
 
 ## Call the Model
 ```ruby
-Unidom::Category::Category.coded_as('x1').scheme_is(scheme).valid_at.alive.first
+@category = Unidom::Category::Category.coded_as('x1').scheme_is(scheme).valid_at.alive.first
 Unidom::Category::Categorizing.categorize! product, into: category, at: Time.now
 
 Unidom::Category::CategoryRollup.roll_up! child_category, into: parent_category, at: Time.now
+
+# Add the @product into the @category.
+@category.categorize! @product, primary: true
 ```
+
+## Include the Concerns
+```ruby
+include Unidom::Category::Concerns::AsCategorized
+```
+
+### As Categorized concern
+The As Categorized concern do the following tasks for the includer automatically:  
+1. Define the has_many :categorizings macro as: ``has_many :categorizings, class_name: 'Unidom::Category::Categorizing', as: :categorized``
+2. Define the has_many :categories macro as: ``has_many :categories, through: :categorizings, source: :category``

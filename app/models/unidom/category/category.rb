@@ -23,4 +23,10 @@ class Unidom::Category::Category < ActiveRecord::Base
   scope :code_length_is,     ->(length) { where 'LENGTH(code) = :code_length',  code_length:       length     }
   scope :code_starting_with, ->(prefix) { where 'code LIKE :prefix_expression', prefix_expression: prefix+'%' }
 
+  def categorize!(categorized, primary: false, at: Time.now)
+    raise ArgumentError('The categorized argument is required.') if categorized.blank?
+    raise ArgumentError('The at argument is required.'         ) if at.blank?
+    categorizings.create! categorized: categorized, elemental: primary, opened_at: at
+  end
+
 end
