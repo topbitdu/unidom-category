@@ -23,5 +23,11 @@
 2. Improve the Category model to add the #categorize! method
 
 ## v1.2
-1. Improve the As Categorized concern to add the #is_categorized! method
-2. Improve the As Categorized concern to add the ``has_many`` #categories method
+1. As Category concern
+2. Improve the Category model to include the As Category concern
+3. Improve the As Categorized concern to add the #is_categorized! method & the #is_categorized? method
+
+## v1.3
+1. As Ancestor Category concern
+2. As Descendant Category concern
+3. Improve the Category model to include the As Ancestor Category concern & the As Descendant Category concern

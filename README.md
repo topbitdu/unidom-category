@@ -35,9 +35,18 @@ Unidom::Category::CategoryRollup.roll_up! child_category, into: parent_category,
 ## Include the Concerns
 ```ruby
 include Unidom::Category::Concerns::AsCategorized
+include Unidom::Category::Concerns::AsCategory
 ```
+
+### As Category concern
+The As Category concern do the following tasks for the includer automatically:  
+1. Define the has_many :categorizings macro as: ``has_many :categorizings, class_name: 'Category::Categorizing'``
+2. Define the #categorize! method as: ``categorize!(categorized, at: Time.now, primary: true)``
+3. Define the #categorize? method as: ``categorize?(categorized, at: Time.now, primary: true)``
 
 ### As Categorized concern
 The As Categorized concern do the following tasks for the includer automatically:  
 1. Define the has_many :categorizings macro as: ``has_many :categorizings, class_name: 'Unidom::Category::Categorizing', as: :categorized``
 2. Define the has_many :categories macro as: ``has_many :categories, through: :categorizings, source: :category``
+3. Define the #is_categorized! method as: ``is_categorized!(into: nil, at: Time.now, primary: true)``
+4. Define the #is_categorized? method as: ``is_categorized?(into: nil, at: Time.now, primary: true)``

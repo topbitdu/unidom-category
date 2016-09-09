@@ -17,7 +17,7 @@ class Unidom::Category::Categorizing < ActiveRecord::Base
   #end
 
   def self.categorize!(categorized, into: nil, at: Time.now)
-    self.categorized_is(categorized).category_is(into).valid_at.alive.first_or_create! elemental: true, opened_at: at
+    categorized_is(categorized).category_is(into).valid_at.alive.first_or_create! elemental: true, opened_at: at
   end
 
 end

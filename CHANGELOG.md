@@ -21,3 +21,8 @@
 ## v1.1
 1. As Categorized concern
 2. Improved the Category model to add the #categorize! method
+
+## v1.2
+1. As Category concern
+2. Improved the Category model to include the As Category concern
+3. Improved the As Categorized concern to add the #is_categorized! method & the #is_categorized? method
