@@ -27,4 +27,7 @@ module Unidom::Category::Concerns::AsCategorized
 
   end
 
+  module ClassMethods
+  end
+
 end
