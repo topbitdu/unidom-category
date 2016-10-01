@@ -26,3 +26,8 @@
 1. As Category concern
 2. Improved the Category model to include the As Category concern
 3. Improved the As Categorized concern to add the #is_categorized! method & the #is_categorized? method
+
+## v1.3
+1. As Ancestor Category concern
+2. As Descendant Category concern
+3. Improved the Category model to include the As Ancestor Category concern & the As Descendant Category concern
