@@ -31,3 +31,7 @@
 1. As Ancestor Category concern
 2. As Descendant Category concern
 3. Improved the Category model to include the As Ancestor Category concern & the As Descendant Category concern
+
+## v1.4
+1. Improve the As Ancestor Category concern to add the #roll_up! method
+2. Improve the As Descendant Category concern to add the #is_rolled_up! method

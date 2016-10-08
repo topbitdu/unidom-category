@@ -75,10 +75,12 @@ The As Categorized concern do the following tasks for the includer automatically
 
 The As Ancestor Category concern do the following tasks for the includer automatically:  
 1. Define the has_many :descendant_category_rollups macro as: ``has_many :descendant_category_rollups, class_name: 'Unidom::Category::CategoryRollup', foreign_key: :ancestor_category_id, source: :ancestor_category``
-2. Define the has_many :descendant_categories macro as: ``has_many :descendant_categories, class_name: 'Unidom::Category::Category', through: :descendant_category_rollups``
+2. Define the has_many :descendant_categories macro as: ``has_many :descendant_categories, class_name: 'Unidom::Category::Category', through: :descendant_category_rollups``  
+3. Define the #roll_up! method as: ``roll_up!(it, at: Time.now, primary: true)``
 
 ### As Descendant Category concern
 
 The As Descendant Category concern do the following tasks for the includer automatically:  
 1. Define the has_many :ancestor_category_rollups macro as: ``has_many :ancestor_category_rollups, class_name: 'Unidom::Category::CategoryRollup', foreign_key: :descendant_category_id, source: :descendant_category``
-2. Define the has_many :ancestor_categories macro as: ``has_many :ancestor_categories, class_name: 'Unidom::Category::Category', through: :ancestor_category_rollups``
+2. Define the has_many :ancestor_categories macro as: ``has_many :ancestor_categories, class_name: 'Unidom::Category::Category', through: :ancestor_category_rollups``  
+3. Define the #is_rolled_up! as: ``is_rolled_up!(it, at: Time.now, primary: true)``
