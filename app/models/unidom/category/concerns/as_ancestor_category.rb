@@ -14,9 +14,9 @@ module Unidom::Category::Concerns::AsAncestorCategory
       rollup
     end
 
-    #def roll_up?(it, at: Time.now, primary: true)
-    #  descendant_category_rollups.descendant_category_is(it).primary(primary).valid_at(now: at).alive.exists?
-    #end
+    def roll_up?(it, at: Time.now, primary: true)
+      descendant_category_rollups.descendant_category_is(it).primary(primary).valid_at(now: at).alive.exists?
+    end
 
   end
 
