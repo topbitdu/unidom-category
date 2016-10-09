@@ -35,3 +35,6 @@
 ## v1.4
 1. Improve the As Ancestor Category concern to add the #roll_up! method
 2. Improve the As Descendant Category concern to add the #is_rolled_up! method
+
+## v2.0
+1. Improve the Category Rollup model to support the Keyword Arguments
