@@ -28,12 +28,8 @@ class Unidom::Category::CategoryRollup < ActiveRecord::Base
     end
   }
 
-  def self.roll_up!(descendant_category, into: nil, at: Time.now)
-    self.descendant_category_is(descendant_category).ancestor_category_is(into).valid_at.alive.first_or_create! opened_at: at
+  def self.roll_up!(it, into: nil, at: Time.now)
+    self.descendant_category_is(it).ancestor_category_is(into).valid_at(now: at).alive.first_or_create! opened_at: at
   end
-
-  #def self.roll_up!(it, into: nil, at: Time.now)
-  #  self.descendant_category_is(it).ancestor_category_is(into).valid_at(now: at).alive.first_or_create! opened_at: at
-  #end
 
 end
