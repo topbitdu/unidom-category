@@ -1,6 +1,6 @@
 # Category Rollup 是分类的层级关系。
 
-class Unidom::Category::CategoryRollup < ActiveRecord::Base
+class Unidom::Category::CategoryRollup < Unidom::Category::ApplicationRecord
 
   self.table_name = 'unidom_category_rollups'
 
