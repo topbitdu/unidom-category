@@ -1,6 +1,6 @@
 # Category 是分类。
 
-class Unidom::Category::Category < ActiveRecord::Base
+class Unidom::Category::Category < Unidom::Category::ApplicationRecord
 
   self.table_name = 'unidom_categories'
 
