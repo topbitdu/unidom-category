@@ -2,7 +2,7 @@
 
 ## v0.1
 1. Category Scheme model & migration (20000301000000)
-2. Category model & migration
+2. Category model & migration (20000302000000)
 3. Category Rollup model & migration
 4. Categorizing model & migration
 
