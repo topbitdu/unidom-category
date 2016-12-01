@@ -37,7 +37,7 @@
 2. Improved the As Descendant Category concern to add the #is_rolled_up! method
 
 ## v1.5
-1. Improve the As Ancestor Category concern to add the #roll_up? method
+1. Improved the As Ancestor Category concern to add the #roll_up? method
 2. Improve the As Descendant Category concern to add the #is_rolled_up? method
 
 ## v1.5.1
