@@ -4,7 +4,7 @@
 1. Category Scheme model & migration (20000301000000)
 2. Category model & migration (20000302000000)
 3. Category Rollup model & migration (20000303000000)
-4. Categorizing model & migration
+4. Categorizing model & migration (20000304000000)
 
 ## v0.2
 1. Improve the Categorizing model to add the ::categorize! method
