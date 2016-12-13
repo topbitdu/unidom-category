@@ -7,7 +7,7 @@
 4. Categorizing model & migration (20000304000000)
 
 ## v0.2
-1. Improved the Categorizing model to add the ::categorize! method
+1. Improved the Categorizing model to add the .``categorize!`` method
 2. Improved the Category model for the validation
 3. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
 
