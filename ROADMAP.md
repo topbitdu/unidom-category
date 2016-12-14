@@ -12,7 +12,7 @@
 3. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
 
 ## v0.3
-1. Improve the Category Rollup model to add the ::roll_up! method
+1. Improve the Category Rollup model to add the .``roll_up!`` method
 
 ## v1.0
 1. Improve the Categorizing model & the Category Rollup model to support the Keyword Arguments
