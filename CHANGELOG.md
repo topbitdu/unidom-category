@@ -20,7 +20,7 @@
 
 ## v1.1
 1. As Categorized concern
-2. Improved the Category model to add the #categorize! method
+2. Improved the Category model to add the #``categorize!`` method
 
 ## v1.2
 1. As Category concern
