@@ -49,5 +49,9 @@
 ## v1.5.3
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
 
+## v1.5.4
+1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.8
+2. Improve the Engine class to include the Engine Extension
+
 ## v2.0
 1. Improve the Category Rollup model to support the Keyword Arguments
