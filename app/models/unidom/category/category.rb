@@ -1,3 +1,4 @@
+##
 # Category 是分类。
 
 class Unidom::Category::Category < Unidom::Category::ApplicationRecord
