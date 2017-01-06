@@ -1,3 +1,4 @@
+##
 # Categorizing 是分类（category）和被分类项（categorized）之间的关联关系。
 
 class Unidom::Category::Categorizing < Unidom::Category::ApplicationRecord
