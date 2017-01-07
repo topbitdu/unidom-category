@@ -1,3 +1,4 @@
+##
 # Category Rollup 是分类的层级关系。
 
 class Unidom::Category::CategoryRollup < Unidom::Category::ApplicationRecord
