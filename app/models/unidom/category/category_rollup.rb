@@ -29,6 +29,9 @@ class Unidom::Category::CategoryRollup < Unidom::Category::ApplicationRecord
     end
   }
 
+  ##
+  # 将 it 归为 into 的下级分类，时间是 at ，缺省为当前时间。如：
+  # Unidom::Category::CategoryRollup.roll_up! moto, into: vehicle
   def self.roll_up!(it, into: nil, at: Time.now)
     self.descendant_category_is(it).ancestor_category_is(into).valid_at(now: at).alive.first_or_create! opened_at: at
   end
