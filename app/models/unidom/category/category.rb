@@ -19,4 +19,4 @@ class Unidom::Category::Category < Unidom::Category::ApplicationRecord
   scope :code_length_is,     ->(length) { where 'LENGTH(code) = :code_length',  code_length:       length     }
   scope :code_starting_with, ->(prefix) { where 'code LIKE :prefix_expression', prefix_expression: prefix+'%' }
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Category::Category'
