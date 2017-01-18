@@ -36,4 +36,4 @@ class Unidom::Category::CategoryRollup < Unidom::Category::ApplicationRecord
     self.descendant_category_is(it).ancestor_category_is(into).valid_at(now: at).alive.first_or_create! opened_at: at
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Category::CategoryRollup'
