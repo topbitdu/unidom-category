@@ -15,4 +15,4 @@ class Unidom::Category::CategoryScheme < Unidom::Category::ApplicationRecord
 
   scope :owned_by, ->(owner) { where owner: owner }
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Category::CategoryScheme'
