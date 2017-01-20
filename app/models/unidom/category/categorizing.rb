@@ -17,4 +17,4 @@ class Unidom::Category::Categorizing < Unidom::Category::ApplicationRecord
     categorized_is(categorized).category_is(into).valid_at.alive.first_or_create! elemental: true, opened_at: at
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Category::Categorizing'
