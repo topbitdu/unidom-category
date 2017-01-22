@@ -88,3 +88,19 @@ The As Descendant Category concern do the following tasks for the includer autom
 2. Define the has_many :ancestor_categories macro as: ``has_many :ancestor_categories, class_name: 'Unidom::Category::Category', through: :ancestor_category_rollups``
 3. Define the #is_rolled_up! as: ``is_rolled_up!(it, at: Time.now, primary: true)``
 4. Define the #is_rolled_up? as: ``is_rolled_up?(it, at: Time.now, primary: true)``
+
+
+
+## Disable the Model & Migration
+
+If you only need the app components other than models, the migrations should be neglected, and the models should not be loaded.
+```ruby
+# config/initializers/unidom.rb
+Unidom::Common.configure do |options|
+
+  options[:neglected_namespaces] = %w{
+    Unidom::Category
+  }
+
+end
+```
