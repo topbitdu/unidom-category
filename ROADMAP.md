@@ -57,5 +57,10 @@
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.9
 2. Improve the models to support the namespace neglecting
 
+## v1.6
+1. Models RSpec examples manifest
+2. Types RSpec examples manifest
+3. Validators RSpec examples manifest
+
 ## v2.0
 1. Improve the Category Rollup model to support the Keyword Arguments
