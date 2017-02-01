@@ -1,5 +1,5 @@
 module Unidom
   module Category
-    VERSION = '1.5.5'.freeze
+    VERSION = '1.6'.freeze
   end
 end
