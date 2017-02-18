@@ -62,5 +62,9 @@
 2. Types RSpec examples manifest
 3. Validators RSpec examples manifest
 
+## v1.6.1
+1. Improve the Category Scheme spec for the validations on the #name attribute
+2. Improve the Category spec for the validations on the #name attribute, & the #abbreviation attribute
+
 ## v2.0
 1. Improve the Category Rollup model to support the Keyword Arguments
