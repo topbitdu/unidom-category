@@ -64,4 +64,4 @@
 
 ## v1.6.1
 1. Improved the Category Scheme spec for the validations on the #name attribute
-2. Improve the Category spec for the validations on the #name attribute, & the #abbreviation attribute
+2. Improved the Category spec for the validations on the #name attribute, & the #abbreviation attribute
