@@ -35,6 +35,20 @@ describe Unidom::Category::CategoryScheme, type: :model do
       { name: '1'*(name_max_length+1) } => 1,
       { name: 'A'*(name_max_length+1) } => 1
 
+    category_1_attributes = {
+      code:         'XC1',
+      name:         'Top Category #1',
+      abbreviation: 'TopCat-2'
+    }
+
+    category_2_attributes = {
+      code:         'XC2',
+      name:         'Top Category #2',
+      abbreviation: 'TopCat-2'
+    }
+
+    it_behaves_like 'has_many', model_attributes, :categories, Unidom::Category::Category, [ category_1_attributes, category_2_attributes ]
+
   end
 
 end
