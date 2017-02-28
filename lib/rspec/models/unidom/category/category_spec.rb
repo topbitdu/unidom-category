@@ -54,6 +54,14 @@ describe Unidom::Category::Category, type: :model do
       { abbreviation: '1'*(abbreviation_max_length+1) } => 1,
       { abbreviation: 'A'*(abbreviation_max_length+1) } => 1
 
+    scheme_attributes = {
+      owner_id:   SecureRandom.uuid,
+      owner_type: 'Unidom::Category::Owner::Mock',
+      name:       'Scheme #1'
+    }
+
+    it_behaves_like 'belongs_to', model_attributes, :scheme, Unidom::Category::CategoryScheme, scheme_attributes
+
   end
 
 end
