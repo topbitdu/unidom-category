@@ -62,6 +62,26 @@ describe Unidom::Category::Category, type: :model do
 
     it_behaves_like 'belongs_to', model_attributes, :scheme, Unidom::Category::CategoryScheme, scheme_attributes
 
+    it_behaves_like 'monomorphic scope', model_attributes, :scheme_is, :scheme
+
+    it_behaves_like 'scope', :code_length_is, [
+      { attributes_collection: [ model_attributes                    ], count_diff: 0, args: [ 1 ] },
+      { attributes_collection: [ model_attributes                    ], count_diff: 1, args: [ 2 ] },
+      { attributes_collection: [ model_attributes                    ], count_diff: 0, args: [ 3 ] },
+      { attributes_collection: [ model_attributes.merge(code: 'XCX') ], count_diff: 0, args: [ 2 ] },
+      { attributes_collection: [ model_attributes.merge(code: 'XCX') ], count_diff: 1, args: [ 3 ] },
+      { attributes_collection: [ model_attributes.merge(code: 'XCX') ], count_diff: 0, args: [ 4 ] }
+    ]
+
+    it_behaves_like 'scope', :code_starting_with, [
+      { attributes_collection: [ model_attributes                   ], count_diff: 0, args: [ 'C' ] },
+      { attributes_collection: [ model_attributes                   ], count_diff: 1, args: [ 'X' ] },
+      { attributes_collection: [ model_attributes                   ], count_diff: 0, args: [ 'A' ] },
+      { attributes_collection: [ model_attributes.merge(code: 'CX') ], count_diff: 1, args: [ 'C' ] },
+      { attributes_collection: [ model_attributes.merge(code: 'CX') ], count_diff: 0, args: [ 'X' ] },
+      { attributes_collection: [ model_attributes.merge(code: 'CX') ], count_diff: 0, args: [ 'A' ] }
+    ]
+
   end
 
 end
