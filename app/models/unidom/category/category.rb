@@ -15,7 +15,7 @@ class Unidom::Category::Category < Unidom::Category::ApplicationRecord
 
   belongs_to :scheme, class_name: 'Unidom::Category::CategoryScheme', foreign_key: :scheme_id
 
-  scope :scheme_is,          ->(scheme) { where scheme_id: (scheme.respond_to?(:id) ? scheme.id : scheme )    }
+  scope :scheme_is,          ->(scheme) { where scheme_id: to_id(scheme)                                      }
   scope :code_length_is,     ->(length) { where 'LENGTH(code) = :code_length',  code_length:       length     }
   scope :code_starting_with, ->(prefix) { where 'code LIKE :prefix_expression', prefix_expression: prefix+'%' }
 
