@@ -16,6 +16,15 @@ describe Unidom::Category::Categorizing, type: :model do
 
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
 
+    category_attributes = {
+      scheme_id:    SecureRandom.uuid,
+      code:         'XC',
+      name:         'Top Category',
+      abbreviation: 'TopCat'
+    }
+
+    it_behaves_like 'belongs_to', model_attributes, :category, Unidom::Category::Category, category_attributes
+
   end
 
 end
