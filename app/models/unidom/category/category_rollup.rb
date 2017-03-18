@@ -14,8 +14,8 @@ class Unidom::Category::CategoryRollup < Unidom::Category::ApplicationRecord
 
   scope :apart, ->(distance = 1) { where distance: distance }
 
-  scope :ancestor_category_is,   ->(category) { where ancestor_category_id:   (category.respond_to?(:id) ? category.id : category) }
-  scope :descendant_category_is, ->(category) { where descendant_category_id: (category.respond_to?(:id) ? category.id : category) }
+  scope :ancestor_category_is,   ->(category) { where ancestor_category_id:   to_id(category) }
+  scope :descendant_category_is, ->(category) { where descendant_category_id: to_id(category) }
 
   after_create ->(record) {
     return unless 1==record.distance
