@@ -25,6 +25,9 @@ describe Unidom::Category::CategoryRollup, type: :model do
     it_behaves_like 'belongs_to', model_attributes, :ancestor_category,   Unidom::Category::Category, category_attributes
     it_behaves_like 'belongs_to', model_attributes, :descendant_category, Unidom::Category::Category, category_attributes
 
+    it_behaves_like 'monomorphic scope', model_attributes, :ancestor_category_is,   :ancestor_category
+    it_behaves_like 'monomorphic scope', model_attributes, :descendant_category_is, :descendant_category
+
   end
 
 end
