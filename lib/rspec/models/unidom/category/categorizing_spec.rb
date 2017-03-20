@@ -25,6 +25,8 @@ describe Unidom::Category::Categorizing, type: :model do
 
     it_behaves_like 'belongs_to', model_attributes, :category, Unidom::Category::Category, category_attributes
 
+    it_behaves_like 'monomorphic scope', model_attributes, :category_is, :category
+
   end
 
 end
