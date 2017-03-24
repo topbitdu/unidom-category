@@ -82,5 +82,9 @@
 2. Improve the Category Rollup spec for the ancestor_category_is scope, & the descendant_category_is scope
 3. Improve the Categorizing spec for the category_is scope
 
+## v1.6.6
+1. Improve the Category Scheme spec for the validations on the #name attribute
+2. Improve the Category spec for the validations on the #name attribute, & the #abbreviation attribute
+
 ## v2.0
 1. Improve the Category Rollup model to support the Keyword Arguments
