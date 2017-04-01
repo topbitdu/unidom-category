@@ -14,7 +14,13 @@ class Unidom::Category::Categorizing < Unidom::Category::ApplicationRecord
   scope :categorized_is, ->(categorized) { where categorized: categorized     }
 
   def self.categorize!(categorized, into: nil, at: Time.now)
+
+    assert_present! :categorized, categorized
+    assert_present! :into,        into
+    assert_present! :at,          at
+
     categorized_is(categorized).category_is(into).valid_at.alive.first_or_create! elemental: true, opened_at: at
+
   end
 
 end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Category::Categorizing'
