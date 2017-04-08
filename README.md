@@ -109,6 +109,8 @@ end
 
 ## RSpec examples
 
+### RSpec example manifest (run automatically)
+
 ```ruby
 # spec/models/unidom_spec.rb
 require 'unidom/category/models_rspec'
@@ -118,4 +120,36 @@ require 'unidom/category/types_rspec'
 
 # spec/validators/unidom_spec.rb
 require 'unidom/category/validators_rspec'
+```
+
+### RSpec shared examples (to be integrated)
+
+```ruby
+# spec/support/unidom_rspec_shared_examples.rb
+require 'unidom/category/rspec_shared_examples'
+
+# spec/models/unidom/category/categorizing_spec.rb
+describe Unidom::Category::Categorizing, type: :model do
+
+  before :each do
+  end
+
+  after :each do
+  end
+
+  context do
+
+    model_attributes = {}
+
+    categorized = Unidom::Product::Product.create! name: 'Model X', abbreviation: 'MX', packing_norm: 'car', measurement_unit: 'car', opened_at: Time.now
+
+    tesla    = Unidom::Party::Company.create!           name:   'Tesla'
+    scheme   = Unidom::Category::CategoryScheme.create! owner:  tesla,  name: 'eCar'
+    category = Unidom::Category::Category.create!       scheme: scheme, name: 'Battery-powered vehicles'
+
+    it_behaves_like 'Unidom::Category::Categorizing', model_attributes, categorized, category
+
+  end
+
+end
 ```
