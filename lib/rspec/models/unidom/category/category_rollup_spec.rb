@@ -28,6 +28,11 @@ describe Unidom::Category::CategoryRollup, type: :model do
     it_behaves_like 'monomorphic scope', model_attributes, :ancestor_category_is,   :ancestor_category
     it_behaves_like 'monomorphic scope', model_attributes, :descendant_category_is, :descendant_category
 
+    it   = Unidom::Category::Category.create! category_attributes.merge(code: 'ZC', name: 'Sub Category', abbreviation: 'SubCat')
+    into = Unidom::Category::Category.create! category_attributes.merge(code: 'YC')
+
+    it_behaves_like 'assert_present!', described_class, :roll_up!, [ it, { into: into, at: Time.now } ], [ { 0 => :it }, :into, :at ]
+
   end
 
 end
