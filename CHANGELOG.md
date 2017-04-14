@@ -90,3 +90,7 @@
 1. Improve the Categorizing model for the argument validations of the .categorize! method
 2. Categorizing shared examples
 3. RSpec shared examples manifest
+
+## v1.6.8
+1. Improve the Category Rollup model for the argument validations of the .roll_up! method
+2. Improve the Category Rollup spec for the argument validations of the .roll_up! method
