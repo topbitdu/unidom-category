@@ -68,7 +68,7 @@
 
 ## v1.6.2
 1. Improved the Category Scheme spec for the ``has_many :categories, class_name: 'Unidom::Category::Category', foreign_key: :scheme_id`` macro
-2. Improve the Category spec for the ``belongs_to :scheme, class_name: 'Unidom::Category::CategoryScheme', foreign_key: :scheme_id`` macro
+2. Improved the Category spec for the ``belongs_to :scheme, class_name: 'Unidom::Category::CategoryScheme', foreign_key: :scheme_id`` macro
 
 ## v1.6.3
 1. Improve the Category spec for the scheme_is scope, the code_length_is scope, & the code_starting_with scope
