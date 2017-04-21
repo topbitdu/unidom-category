@@ -74,7 +74,7 @@
 1. Improved the Category spec for the scheme_is scope, the code_length_is scope, & the code_starting_with scope
 
 ## v1.6.4
-1. Improve the Categorizing spec for the ``belongs_to :category, class_name: 'Unidom::Category::Category'`` macro
+1. Improved the Categorizing spec for the ``belongs_to :category, class_name: 'Unidom::Category::Category'`` macro
 2. Improve the Category Rollup spec for the ``belongs_to :ancestor_category, class_name: 'Unidom::Category::Category'`` macro, & the ``belongs_to :descendant_category, class_name: 'Unidom::Category::Category'`` macro
 
 ## v1.6.5
