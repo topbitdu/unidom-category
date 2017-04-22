@@ -75,7 +75,7 @@
 
 ## v1.6.4
 1. Improved the Categorizing spec for the ``belongs_to :category, class_name: 'Unidom::Category::Category'`` macro
-2. Improve the Category Rollup spec for the ``belongs_to :ancestor_category, class_name: 'Unidom::Category::Category'`` macro, & the ``belongs_to :descendant_category, class_name: 'Unidom::Category::Category'`` macro
+2. Improved the Category Rollup spec for the ``belongs_to :ancestor_category, class_name: 'Unidom::Category::Category'`` macro, & the ``belongs_to :descendant_category, class_name: 'Unidom::Category::Category'`` macro
 
 ## v1.6.5
 1. Improve the Category Rollup model for the ancestor_category_is scope, & the descendant_category_is scope
