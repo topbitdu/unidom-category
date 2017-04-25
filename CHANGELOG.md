@@ -79,7 +79,7 @@
 
 ## v1.6.5
 1. Improved the Category Rollup model for the ancestor_category_is scope, & the descendant_category_is scope
-2. Improve the Category Rollup spec for the ancestor_category_is scope, & the descendant_category_is scope
+2. Improved the Category Rollup spec for the ancestor_category_is scope, & the descendant_category_is scope
 3. Improve the Categorizing spec for the category_is scope
 
 ## v1.6.6
