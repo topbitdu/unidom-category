@@ -83,7 +83,7 @@
 3. Improved the Categorizing spec for the category_is scope
 
 ## v1.6.6
-1. Improve the Category Scheme spec for the validations on the #name attribute
+1. Improved the Category Scheme spec for the validations on the #name attribute
 2. Improve the Category spec for the validations on the #name attribute, & the #abbreviation attribute
 
 ## v1.6.7
