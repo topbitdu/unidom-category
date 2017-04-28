@@ -84,7 +84,7 @@
 
 ## v1.6.6
 1. Improved the Category Scheme spec for the validations on the #name attribute
-2. Improve the Category spec for the validations on the #name attribute, & the #abbreviation attribute
+2. Improved the Category spec for the validations on the #name attribute, & the #abbreviation attribute
 
 ## v1.6.7
 1. Improve the Categorizing model for the argument validations of the .categorize! method
