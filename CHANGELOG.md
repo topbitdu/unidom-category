@@ -87,7 +87,7 @@
 2. Improved the Category spec for the validations on the #name attribute, & the #abbreviation attribute
 
 ## v1.6.7
-1. Improve the Categorizing model for the argument validations of the .categorize! method
+1. Improved the Categorizing model for the argument validations of the .categorize! method
 2. Categorizing shared examples
 3. RSpec shared examples manifest
 
