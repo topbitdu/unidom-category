@@ -63,7 +63,7 @@
 3. Validators RSpec examples manifest
 
 ## v1.6.1
-1. Improved the Category Scheme spec for the validations on the #name attribute
+1. Improved the Category Scheme spec for the validations on the #``name`` attribute
 2. Improved the Category spec for the validations on the #name attribute, & the #abbreviation attribute
 
 ## v1.6.2
