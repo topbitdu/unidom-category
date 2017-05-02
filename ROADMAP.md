@@ -64,7 +64,7 @@
 
 ## v1.6.1
 1. Improve the Category Scheme spec for the validations on the #``name`` attribute
-2. Improve the Category spec for the validations on the #name attribute, & the #abbreviation attribute
+2. Improve the Category spec for the validations on the #``name`` attribute, & the #abbreviation attribute
 
 ## v1.6.2
 1. Improve the Category Scheme spec for the ``has_many :categories, class_name: 'Unidom::Category::Category', foreign_key: :scheme_id`` macro
