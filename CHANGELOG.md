@@ -92,5 +92,5 @@
 3. RSpec shared examples manifest
 
 ## v1.6.8
-1. Improve the Category Rollup model for the argument validations of the .roll_up! method
+1. Improved the Category Rollup model for the argument validations of the .roll_up! method
 2. Improve the Category Rollup spec for the argument validations of the .roll_up! method
